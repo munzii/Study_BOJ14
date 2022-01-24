@@ -17,6 +17,10 @@ public class P15649 {
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		int n = Integer.parseInt(st.nextToken());
 		int m = Integer.parseInt(st.nextToken());
+		
+		arr = new int[m];
+		visit = new boolean[n];
+		dfs(n,m,0);
 
 	}
 
