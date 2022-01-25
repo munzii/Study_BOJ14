@@ -21,7 +21,22 @@ public class P15649 {
 		arr = new int[m];
 		visit = new boolean[n];
 		dfs(n,m,0);
+		
+		br.close();
+		bw.flush();
+		bw.close();
 
+	}
+	
+	private static void dfs(int n, int m, int depth) throws IOException {
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		if(depth == m) {
+			for(int val : arr) {
+				bw.write(val + " ");
+			}
+			bw.write('\n');
+			return;
+		}
 	}
 
 }
