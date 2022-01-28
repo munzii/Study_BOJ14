@@ -7,13 +7,13 @@ import java.util.StringTokenizer;
 
 public class P15649 {
 	
-	public static int[] arr;
-	public static boolean[] visit;
+	static int[] arr;
+	static boolean[] visit;
+	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		int n = Integer.parseInt(st.nextToken());
 		int m = Integer.parseInt(st.nextToken());
@@ -28,13 +28,12 @@ public class P15649 {
 
 	}
 	
-	private static void dfs(int n, int m, int depth) throws IOException {
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+	public static void dfs(int n, int m, int depth) throws IOException {
 		if(depth == m) {
 			for(int val : arr) {
-				bw.write(val + " ");
+				bw.write(String.valueOf(val) + " ");
 			}
-			bw.write('\n');
+			bw.write("\n");
 			return;
 		}
 		
